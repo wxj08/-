@@ -1,0 +1,45 @@
+<!-- 顶部轮播图 -->
+<view>
+	<swiper indicator-dots="{{true}}" indicator-color="var(--themeColor)" autoplay="true" circular="true">
+		<block wx:for="{{banner}}" wx:key="banner">
+			<swiper-item bindtap='goToMall'>
+				<image src='{{item.image}}' mode="widthFix" style="width:100%;height:100%;" bindtap="toBannerDetail" data-id="{{item._id}}"/>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+
+<!-- <view class="paotui" bindtap="toPaotui">
+  校园跑腿
+</view> -->
+
+<view class="type_wrap">
+  <view class="type {{choose?'active':''}}" bindtap="choose">校园资讯</view>
+  <view class="type {{!choose?'active':''}}" bindtap="choose">互动消息</view>
+</view>
+
+
+
+<!-- 资讯信息 -->
+<block wx:if="{{choose}}">
+<block wx:for="{{zixunList}}">
+  <view class="big-box" bindtap="toBannerDetail" data-id="{{item._id}}">
+    <image class="img" src="{{item.image}}"></image>
+    <view class="right">
+      <view>
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+</block>
+</block>
+
+
+<block wx:if="{{!choose}}">
+  <block wx:for="{{loveAction}}">
+    <view bindtap="toLoveDetail" data-id="{{item._id}}" class="msg" wx:if="{{item.commentList.length!=0 || item.prizeList.length!=0}}">{{item.text}}</view>
+  </block>
+  <block wx:for="{{loseAction}}">
+    <view bindtap="toLoseDetail" data-id="{{item._id}}" class="msg" wx:if="{{item.commentList.length!=0 || item.prizeList.length!=0}}">{{item.text}}</view>
+  </block>
+</block>

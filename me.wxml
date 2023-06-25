@@ -1,0 +1,29 @@
+<view class="user-info">
+  <view wx:if="{{userInfo}}"><image src="{{userInfo.avatarUrl}}" bindtap="previewImg"></image></view>
+  <view wx:if="{{!userInfo}}"><image src="/image/touxiang.png"></image></view>
+  <view class="nickname">{{userInfo.nickName}}</view>
+  <view class="nickname">{{userInfo.school}}</view>
+  <button wx:if="{{!userInfo}}" bindtap="getUserProfile" class="login-but">登录</button>
+ 
+</view>
+
+
+<view class="menu-cell" bindtap="toChooseSchool">
+  我的学校
+</view>
+
+<view class="menu-cell" bindtap="tobiaobai">
+  我的表白发布
+</view>
+<view class="menu-cell" bindtap="toshiwu">
+  失物招领发布
+</view>
+<view class="menu-cell" bindtap="toershou">
+  二手闲置发布
+</view>
+<view class="menu-cell" bindtap="toPao">
+  跑腿发布
+</view>
+<view class="menu-cell" bindtap="loginOut">
+  退出登录
+</view>
