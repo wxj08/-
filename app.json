@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/luntan/luntan",
+    "pages/me/me",
+    "pages/like/like",
+    "pages/like/publish/publish",
+    "pages/lose/publish/publish",
+    "pages/lose/lose",
+    "pages/index/bannerdetail/bannerdetail",
+    "pages/me/biaobai/biaobai",
+    "pages/me/shiwu/shiwu",
+    "pages/detail/detail",
+    "pages/detail2/detail2",
+    "pages/me/chooseSchool/chooseSchool",
+    "pages/zhuye/zhuye",
+    "pages/zhuye2/zhuye2",
+    "pages/zhuye3/zhuye3",
+    "pages/ershou/ershou",
+    "pages/ershou/publish/publish",
+    "pages/detail3/detail3",
+    "pages/me/ershou/ershou",
+    "pages/paotui/paotui",
+    "pages/paotui/publish/publish",
+    "pages/detail4/detail4",
+    "pages/me/pao/pao",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#47ADE3",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "image/home_yes.png",
+        "iconPath": "image/home_no.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "image/comment_yes.png",
+        "iconPath": "image/comment.png",
+        "pagePath": "pages/luntan/luntan",
+        "text": "论坛"
+      },
+      {
+        "selectedIconPath": "image/me_yes.png",
+        "iconPath": "image/me_no.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  }
+}
